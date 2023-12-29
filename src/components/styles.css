@@ -61,13 +61,18 @@ a:hover, a:active{
 }
 
 .drawer-content {
-    width: 16rem;
+    
+    padding: 1rem
 }
 
 .nav-list{
     gap: 0.3rem;
     display: flex;
     flex-direction: column;
+}
+
+.nav-list a:hover{
+    background-color: var(--light-bg);
 }
 
 .list-icon{
