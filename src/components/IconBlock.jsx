@@ -3,7 +3,7 @@ import { Typography } from "@mui/material";
 
 const IconBlock = ({ icon, number, label }) => {
     return (
-        <div className="icon-block">
+        <div className="icon-block block">
             <div className="icon">{icon}</div>
             <div className="icon-desc">
                 <Typography variant="subtitle2" className="number">

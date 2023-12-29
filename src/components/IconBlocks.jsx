@@ -13,19 +13,19 @@ const IconBlocks = () => {
             <IconBlock
                 icon={<ExperienceIcon />}
                 number="5+"
-                label="years of Experience"
+                label="Years of Experience"
             />
             <IconBlock
                 icon={<ProjectsIcon />}
                 number="80+"
-                label="completed projects"
+                label="Completed Projects"
             />
             <IconBlock
                 icon={<UserFriendlyIcon />}
                 number="100%"
-                label="user-friendly"
+                label="User-friendly Interfaces"
             />
-            <IconBlock icon={<StarIcon />} number="One" label="More Block" />
+            <IconBlock icon={<StarIcon />} number="500+" label="Successfully Resolved Issues" />
         </div>
     );
 };

@@ -12,9 +12,9 @@ import {
 
 export const navigationLinks = [
     { label: "Home", icon: <HomeIcon />, link: "#home" },
-    { label: "Features", icon: <FeaturesIcon />, link: "#features" },
+    { label: "Skills", icon: <FeaturesIcon />, link: "#skills" },
     { label: "Portfolio", icon: <PortfolioIcon />, link: "#portfolio" },
-    { label: "Resume", icon: <ResumeIcon />, link: "#resume" },
+    { label: "Experience", icon: <ResumeIcon />, link: "#resume" },
     { label: "Contacts", icon: <ContactsIcon />, link: "#contacts" },
 ];
 
