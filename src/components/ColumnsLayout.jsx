@@ -4,6 +4,7 @@ import { Menu as MenuIcon } from "@mui/icons-material";
 import LeftColumn from "./LeftColumn";
 import RightColumn from "./RightColumn";
 import "./styles.css";
+import SideBar from "./SideBar";
 
 const ColumnsLayout = () => {
     const [drawerOpen, setDrawerOpen] = useState(false);
@@ -30,7 +31,7 @@ const ColumnsLayout = () => {
                     classes={{ paper: "drawer-content" }}
                 >
                     <div className="drawer-content">
-                        <LeftColumn />
+                        <SideBar onClose={toggleDrawer}/>
                     </div>
                 </Drawer>
             </Hidden>

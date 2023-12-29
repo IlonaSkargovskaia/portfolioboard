@@ -1,11 +1,10 @@
 import React, { useState } from "react";
-import { Avatar, List, ListItem } from "@mui/material";
-import logo from "../assets/images/logo.jpg";
+import { List, ListItem } from "@mui/material";
 import "./styles.css";
 import { navigationLinks } from "../linksData";
 import { socialLinks } from "../linksData";
 
-const LeftColumn = () => {
+const SideBar = ({ onClose }) => {
     const [active, setActive] = useState(false);
     
 
@@ -14,21 +13,12 @@ const LeftColumn = () => {
     };
 
     return (
-        <div className="left-column">
-            <div className="left-header">
-                <Avatar
-                    alt="Ilona Skargovskaia"
-                    src={logo}
-                    style={{
-                        width: "120px",
-                        height: "120px",
-                        border: " 2px solid #c3cbdf",
-                    }}
-                />
+        <div>
+            <div className="sidebar-header" >
                 <h2>
                     Ilona <span>Skargovskaia</span>
                 </h2>
-                <div className="left-subtitle">Full Stack developer</div>
+                <div style={{margin: "0.5rem 0", fontSize: '14px', color: '#8f9bba'}}>Full Stack developer</div>
             </div>
 
             {/* Navigation List */}
@@ -38,7 +28,10 @@ const LeftColumn = () => {
                         key={index}
                         component="a"
                         href={link.link}
-                        onClick={() => handleActive(index)}
+                        onClick={() => {
+                            handleActive(index);
+                            onClose();
+                        }}
                         className={active === index ? "active" : ""}
                     >
                         <div className="list-icon">{link.icon}</div>
@@ -68,4 +61,4 @@ const LeftColumn = () => {
     );
 };
 
-export default LeftColumn;
+export default SideBar;

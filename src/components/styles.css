@@ -19,9 +19,36 @@ body{
     background-color: var(--body);
 }
 
+h1{
+    font-size: 34px;
+    font-weight: 900;
+    margin: 1.5rem;
+}
+
+h1 span{
+    color: var(--accent)
+}
+
 h3{
     font-weight: 700;
     text-transform: capitalize;
+}
+
+.container button{
+    background-color: var(--accent);
+    border-radius: 20px;
+}
+
+.container button:hover{
+    background-color: var(--primary);
+}
+
+.flex{
+    display: flex;
+}
+
+.ac{
+    align-items: center;
 }
 
 a{
@@ -39,7 +66,7 @@ a:hover, a:active{
 
 /* left column */
 .container .left-column {
-    width: 16rem;
+    width: 18rem;
     padding: 16px;
     background-color: #fff;
     height: 100vh;
@@ -60,6 +87,26 @@ a:hover, a:active{
     text-transform: uppercase;
 }
 
+.sidebar-header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--mid-bg);
+    margin-bottom: 2rem;
+}
+
+.sidebar-header h2 span{
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.left-subtitle{
+    font-weight: 200;
+    font-size: 14px;
+    margin-top: -0.3rem;
+}
+
 .drawer-content {
     
     padding: 1rem
@@ -73,6 +120,11 @@ a:hover, a:active{
 
 .nav-list a:hover{
     background-color: var(--light-bg);
+}
+
+.nav-list a.active{
+    border-right: 2px solid var(--accent);
+    color: var(--primary);
 }
 
 .list-icon{
@@ -134,6 +186,66 @@ a:hover, a:active{
     padding: 16px;
 }
 
+.header-contacts{
+    display: flex;
+    flex-direction: row;
+    -webkit-box-align: center;
+    align-items: center;
+    flex-wrap: unset;
+    padding: 10px;
+    border-radius: 30px;
+    box-shadow: rgba(112, 144, 176, 0.18) 14px 17px 40px 4px;
+    gap: 1rem;
+    margin: 0 1rem;
+}
+
+.contacts-icon{
+    display: flex;
+    align-items: center;
+    margin-left: 1rem;
+    color: var(--accent);
+}
+
+.header-contacts .contacts-label{
+    color: var(--primary);
+    margin-left: 0.5rem;
+}
+
+.icon-blocks{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin: 2rem 0;
+    
+}
+
+.icon-block{
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 15px 20px;
+    border-radius: 20px;
+    width: 100%;
+}
+
+.icon-block .icon{
+    background: var(--light-bg);
+    border-radius: 50%;
+    padding: 1rem;
+    color: var(--accent);
+}
+
+.icon-block .number{
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.icon-block .label{
+    color: var(--secondary)
+}
 
 
 @media (max-width: 1199px) {
