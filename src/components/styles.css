@@ -671,7 +671,7 @@ a:active {
 }
 
 .contacts-form .MuiInputBase-root {
-    border-radius: 26px;
+    border-radius: 18px;
     background-color: var(--light-bg);
 }
 

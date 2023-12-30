@@ -1,11 +1,5 @@
 import React, { useState } from "react";
-import {
-    Tabs,
-    Tab,
-    CardContent,
-    Button,
-    Typography,
-} from "@mui/material";
+import { Tabs, Tab, CardContent, Button, Typography } from "@mui/material";
 import { projectsData } from "../projectsData";
 import ProjectModal from "./ProjectModal";
 import GitHubIcon from "@mui/icons-material/GitHub";
@@ -73,65 +67,78 @@ const Portfolio = () => {
             </div>
             <div className="my-row projects">
                 {filteredProjects.map((project) => (
-                    <div key={project.id} className="block-column project">
+                    <div
+                        key={project.id}
+                        className="block-column project hover"
+                    >
                         <img
                             src={project.image}
                             alt={project.title}
                             style={{ width: "100%", height: "auto" }}
                             onClick={() => handleCardClick(project)}
                         />
-                        <div className="flex jb" style={{flexDirection: "column",     height: "100%"}}>
-                        <CardContent>
-                            <div className="flex ac jb card-header">
-                                <Typography variant="body2" className="lang">
-                                    {project.languages.join(", ")}
+                        <div
+                            className="flex jb"
+                            style={{ flexDirection: "column", height: "100%" }}
+                        >
+                            <CardContent>
+                                <div className="flex ac jb card-header">
+                                    <Typography
+                                        variant="body2"
+                                        className="lang"
+                                    >
+                                        {project.languages.join(", ")}
+                                    </Typography>
+                                    <Typography
+                                        variant="body1"
+                                        className="category-name"
+                                    >
+                                        {project.category}
+                                    </Typography>
+                                </div>
+
+                                <Typography variant="h4">
+                                    {project.title}
                                 </Typography>
                                 <Typography
-                                    variant="body1"
-                                    className="category-name"
+                                    variant="body2"
+                                    paragraph
+                                    className="card-desc"
                                 >
-                                    {project.category}
+                                    {project.description}
                                 </Typography>
-                            </div>
-
-                            <Typography variant="h4">
-                                {project.title}
-                            </Typography>
-                            <Typography
-                                variant="body2"
-                                paragraph
-                                className="card-desc"
-                            >
-                                {project.description}
-                            </Typography>
-                        </CardContent>
-                        <div className="project-btns">
-                            <Button
-                                href={project.githubLink}
-                                target="_blank"
-                                rel="noreferrer"
-                                className="main-btn"
-                                startIcon={<GitHubIcon />}
-                            >
-                                GitHub
-                            </Button>
-                            <Button
-                                href={project.liveDemoLink}
-                                target="_blank"
-                                rel="noreferrer"
-                                className="secondary-btn"
-                                startIcon={<LaunchIcon />}
-                            >
-                                Live Demo
-                            </Button>
-                            <Button
-                                onClick={() => handleCardClick(project)}
-                                className="details-btn"
-                                startIcon={<InfoIcon />}
-                            >
-                                Details
-                            </Button>
-                        </div>
+                            </CardContent>
+                            {project.githubLink && project.liveDemoLink ? (
+                                <div className="project-btns">
+                                    <Button
+                                        href={project.githubLink}
+                                        target="_blank"
+                                        rel="noreferrer"
+                                        className="main-btn"
+                                        startIcon={<GitHubIcon />}
+                                    >
+                                        GitHub
+                                    </Button>
+                                    <Button
+                                        href={project.liveDemoLink}
+                                        target="_blank"
+                                        rel="noreferrer"
+                                        className="secondary-btn"
+                                        startIcon={<LaunchIcon />}
+                                    >
+                                        Demo
+                                    </Button>
+                                    <Button
+                                        onClick={() => handleCardClick(project)}
+                                        className="details-btn"
+                                        startIcon={<InfoIcon />}
+                                    >
+                                        Details
+                                    </Button>
+                                </div>
+                            ) : (
+                                "in process ..."
+                            )}
                         </div>
                     </div>
                 ))}
