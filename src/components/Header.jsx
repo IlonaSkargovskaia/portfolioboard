@@ -37,6 +37,7 @@ const Header = () => {
                         variant="contained"
                         color="primary"
                         startIcon={<GetApp />}
+                        className="download"
                     >
                         Download CV
                     </Button>

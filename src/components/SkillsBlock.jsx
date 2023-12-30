@@ -35,7 +35,7 @@ const SkillsBlock = () => {
                 </div>
             </div>
 
-            <div className="block hover">
+            <div className="block">
                 <div className="title">
                     <h3>What I do</h3>
                 </div>

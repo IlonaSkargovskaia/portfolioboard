@@ -39,8 +39,14 @@ const Education = () => {
                                     {education.year} / {education.country}
                                 </Typography>
                                 <Typography variant="body1">
-                                    <div className="flex ac" >
-                                        <SchoolIcon style={{marginRight: "0.5rem"}}/> {education.institution}
+                                    <div
+                                        className="flex ac"
+                                        style={{ marginBottom: "1rem" }}
+                                    >
+                                        <SchoolIcon
+                                            style={{ marginRight: "0.5rem", fontSize: "15px" }}
+                                        />
+                                        {education.institution}
                                     </div>
                                 </Typography>
                             </TimelineContent>

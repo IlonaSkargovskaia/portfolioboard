@@ -3,6 +3,9 @@ import IconBlocks from "./IconBlocks";
 import Header from "./Header";
 import SkillsBlock from "./SkillsBlock";
 import Education from "./Education";
+import WorkExperience from "./WorkExperience";
+import Contacts from "./Contacts";
+import Portfolio from "./Portfolio";
 
 const RightColumn = () => {
     return (
@@ -12,17 +15,15 @@ const RightColumn = () => {
             <main>
                 <IconBlocks />
                 <SkillsBlock />
+                <Portfolio />
 
-                <section className="my-row portfolio">
+                <section className="my-row work" id="resume">
                     <div className="col-65">
-                        <h3 style={{ margin: "1rem 1rem 2rem 1rem" }}>
-                            Look at my recent projects
-                        </h3>
-                        <div className="block">Portfolio</div>
+                        <WorkExperience />
                     </div>
-
                     <div className="col-25">
                         <Education />
+                        <Contacts />
                     </div>
                 </section>
             </main>

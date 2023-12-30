@@ -27,7 +27,7 @@ const LeftColumn = () => {
                                 border: " 2px solid #c3cbdf",
                             }}
                         />
-                        <h2>
+                        <h2 style={{    fontSize: "1.3rem"}}>
                             Ilona <span>Skargovskaia</span>
                         </h2>
                         <div className="left-subtitle">
