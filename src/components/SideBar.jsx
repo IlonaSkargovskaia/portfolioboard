@@ -6,7 +6,6 @@ import { socialLinks } from "../linksData";
 
 const SideBar = ({ onClose }) => {
     const [active, setActive] = useState(false);
-    
 
     const handleActive = (index) => {
         setActive(index);
@@ -14,14 +13,24 @@ const SideBar = ({ onClose }) => {
 
     return (
         <div>
-            <div className="sidebar-header" >
+            <div className="sidebar-header">
+            <button className="close-button" onClick={onClose}>
+                X
+            </button>
                 <h2>
                     Ilona <span>Skargovskaia</span>
                 </h2>
-                <div style={{margin: "0.5rem 0", fontSize: '14px', color: '#8f9bba'}}>Full Stack developer</div>
+                <div
+                    style={{
+                        margin: "0.5rem 0",
+                        fontSize: "14px",
+                        color: "#8f9bba",
+                    }}
+                >
+                    Full Stack developer
+                </div>
             </div>
 
-            {/* Navigation List */}
             <List className="nav-list">
                 {navigationLinks.map((link, index) => (
                     <ListItem
@@ -40,7 +49,8 @@ const SideBar = ({ onClose }) => {
                 ))}
             </List>
 
-            {/* Social Links */}
+            
+
             <div className="social-links">
                 <h3>Find me</h3>
                 <div className="social-links-box">
