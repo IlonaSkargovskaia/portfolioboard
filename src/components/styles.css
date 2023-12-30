@@ -592,7 +592,7 @@ a:active {
     font-weight: 200;
 }
 
-.css-1ms7hib-MuiTimelineItem-root::before {
+.my-row .work ul li::before {
     display: none !important;
 }
 
