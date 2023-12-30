@@ -12,7 +12,8 @@ const Header = () => {
                 justifyContent: "space-between",
             }}
         >
-            <div>
+            
+            <div id="home">
                 <h1>
                     Hi there! I’m Ilona <br />
                     <span>Full Stack</span> Developer

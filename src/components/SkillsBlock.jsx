@@ -4,6 +4,7 @@ import { Dashboard, PhoneAndroid, Web } from "@mui/icons-material";
 
 const SkillsBlock = () => {
     return (
+        <section className="skills" id="skills">
         <div className="my-row skills">
             <div className="block">
                 <div className="title">
@@ -34,13 +35,13 @@ const SkillsBlock = () => {
                 </div>
             </div>
 
-            <div className="block">
+            <div className="block hover">
                 <div className="title">
                     <h3>What I do</h3>
                 </div>
                 <div className="body">
                     <p className="about-text">
-                        {" "}
+                        
                         In addition to my technical skills, I have strong
                         problem-solving abilities, follow web development
                         trends, and write clean, understandable code. I’m
@@ -48,7 +49,7 @@ const SkillsBlock = () => {
                         applications.
                     </p>
                     <div className="specializations flex">
-                        <div className="specialization">
+                        <div className="specialization ">
                             <Web />
                             <h4>Websites</h4>
                             <p>
@@ -74,6 +75,7 @@ const SkillsBlock = () => {
                 </div>
             </div>
         </div>
+        </section>
     );
 };
 

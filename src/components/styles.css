@@ -13,10 +13,16 @@
     --transition: all 0.3s ease-in-out;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: var(--main-font);
     color: var(--primary);
     background-color: var(--body);
+    font-weight: 200;
+    font-size: 14px;
     transition: top 0.2s linear 0s, bottom 0.2s linear, width 0.35s ease;
 }
 
@@ -53,6 +59,8 @@ h3 {
     align-items: center;
 }
 
+
+
 a {
     color: var(--secondary);
     transition: var(--transition);
@@ -73,9 +81,10 @@ a:active {
     padding: 16px;
     background-color: #fff;
     height: 100vh;
+    position: fixed;
 }
 
-.left-col-wrapper{
+.left-col-wrapper {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -201,6 +210,7 @@ a:active {
 .right-column {
     flex: 1;
     padding: 16px;
+    margin-left: 19rem;
 }
 
 .header-contacts {
@@ -228,7 +238,7 @@ a:active {
     margin-left: 0.5rem;
 }
 
-.header-contacts .contacts-label:hover{
+.header-contacts .contacts-label:hover {
     color: var(--accent)
 }
 
@@ -245,6 +255,7 @@ a:active {
     display: flex;
     align-items: flex-start;
     gap: 1rem;
+    margin-bottom: 1rem;
 }
 
 .block {
@@ -256,13 +267,19 @@ a:active {
     border-radius: 20px;
     width: 100%;
 
+    
+}
+
+
+
+.hover{
     animation: fadeIn 0.5s ease-out;
     animation-fill-mode: forwards;
     opacity: 0;
     transition: margin 0.3s ease-out, opacity 0.3s ease-out;
 }
 
-.block:hover {
+.hover:hover {
     margin-top: -10px;
     cursor: pointer;
 }
@@ -298,54 +315,54 @@ a:active {
 
 
 
-.skills .block{
+.skills .block {
     flex-direction: column;
     align-items: start;
 }
 
-.skills .title{
+.skills .title, .edu-block .title {
     margin: 0.5rem 0 1.7rem;
 }
 
-.skills .body{
+.skills .body {
     width: 100%;
     justify-content: space-between;
     gap: 2rem;
 }
 
-.skills .body .bar{
+.skills .body .bar {
     width: 100%
 }
 
-.skill-item h6{
+.skill-item h6 {
     color: var(--primary);
     margin: 0.5rem 0 0 0;
     font-weight: 100;
 }
 
-.skill-item .bar{
+.skill-item .bar {
     width: 100%;
 }
 
-.skill-item .progress{
+.skill-item .progress {
     background-color: #e6e8f0;
 }
 
-.skill-item .progress span{
+.skill-item .progress span {
     background: linear-gradient(90deg, rgb(97 56 255) 0%, rgb(207 194 255) 100%);
 }
 
-.block .about-text{
+.block .about-text {
     line-height: 130%;
     font-weight: 200;
     font-size: 15px;
 }
 
-.specializations{
+.specializations {
     gap: 1rem;
 }
 
-.specialization{
+.specialization {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
@@ -357,32 +374,32 @@ a:active {
     border-radius: 20px;
 }
 
-.specialization h4{
+.specialization h4 {
     font-size: 20px;
     font-weight: 500;
 }
 
-.specialization svg{
+.specialization svg {
     color: var(--accent);
 }
 
-.specialization p{
+.specialization p {
     line-height: 130%;
 }
 
-.copyrights{
+.copyrights {
     width: 100%;
     text-align: center;
     font-weight: 200;
     font-size: 14px;
 }
 
-.sidebar-img-section{
+.sidebar-img-section {
     margin: 2rem 0;
 }
 
 .sidebar-img-section .sidebar-img-content {
-    
+
     background: var(--accent);
     border-radius: 20px;
     color: #fff;
@@ -395,16 +412,48 @@ a:active {
     margin-top: -60px;
 }
 
-.sidebar-img-section .sidebar-img-content h4{
+.sidebar-img-section .sidebar-img-content h4 {
     margin: 1rem 0 2rem 0;
 }
 
 .sidebar-img-section .sidebar-img-content .btn {
     color: var(--primary);
-    
+
     padding: 0.2rem 1.1rem;
     background: var(--light-bg);
     border-radius: 20px;
+}
+
+.portfolio {
+    justify-content: space-between;
+}
+
+.portfolio .col-65 {
+    width: 65%;
+}
+
+.portfolio .col-25 {
+    flex: 1;
+}
+
+.css-1ms7hib-MuiTimelineItem-root::before{
+    display: none !important;
+}
+
+.edu-block p{
+    font-weight: 200 !important;
+    font-size: 14px;
+}
+
+.edu-block .year{
+    color: var(--secondary);
+    font-size: 14px;
+}
+
+.edu-block .edu-title{
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 1.2;
 }
 
 @media (max-width: 1199px) {
