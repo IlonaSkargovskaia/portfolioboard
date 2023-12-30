@@ -5,12 +5,8 @@ import resumePDF from "../Frontend_CV_Ilona.pdf";
 
 const Header = () => {
     return (
-        <header
-            style={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "space-between",
-            }}
+        <header className="header"
+            
         >
             
             <div id="home">
@@ -19,7 +15,7 @@ const Header = () => {
                     <span>Full Stack</span> Developer
                 </h1>
             </div>
-            <div className="flex ac">
+            <div className="flex ac header-box">
                 <div className="header-contacts">
                     <ContactInfo
                         icon={<Phone />}

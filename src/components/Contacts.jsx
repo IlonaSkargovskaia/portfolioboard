@@ -26,21 +26,17 @@ const Contacts = () => {
                 </div>
                 <div className="body block accent">
                     <div
-                        className="flex ac"
+                        className="flex ac contact-box"
                         style={{ gap: "1rem", justifyContent: "space-around" }}
                     >
-                        <p style={{ width: "40%" }}>
+                        <p className="desc" style={{ width: "40%" }}>
                             Feel free to reach out to me for collaboration,
                             opportunities, or just to say hello—I'm always open
                             to connecting!
                         </p>
                         <div
-                            className="flex"
-                            style={{
-                                display: "flex",
-                                flexDirection: "column",
-                                gap: "1rem",
-                            }}
+                            className="flex contacts-accent-block"
+                            
                         >
                             <div>
                                 <Phone

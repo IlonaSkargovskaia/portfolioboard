@@ -7,7 +7,7 @@ import { socialLinks } from "../linksData";
 import bottomImg from "../assets/images/bottom.png";
 
 const LeftColumn = () => {
-    const [active, setActive] = useState(false);
+    const [active, setActive] = useState(0);
 
     const handleActive = (index) => {
         setActive(index);
@@ -71,16 +71,16 @@ const LeftColumn = () => {
                 </div>
 
                 <div className="copyrights">
-                    <div class="sidebar-img-section">
-                        <div class="sidebar-img-content">
+                    <div className="sidebar-img-section">
+                        <div className="sidebar-img-content">
                             <img
                                 src={bottomImg}
                                 alt=""
-                                class="img-fluid media"
+                                className="img-fluid media"
                             />
                             <h4>Let's make it happen</h4>
                            
-                            <a class="btn btn-secondary" href="/">
+                            <a className="btn btn-secondary" href="/">
                                 Get in touch
                             </a>
                         </div>

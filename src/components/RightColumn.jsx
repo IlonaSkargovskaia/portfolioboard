@@ -9,7 +9,7 @@ import Portfolio from "./Portfolio";
 
 const RightColumn = () => {
     return (
-        <div className="right-column">
+        <>
             <Header />
 
             <main>
@@ -27,7 +27,7 @@ const RightColumn = () => {
                     </div>
                 </section>
             </main>
-        </div>
+        </>
     );
 };
 
