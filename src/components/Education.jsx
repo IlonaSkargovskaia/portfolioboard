@@ -40,7 +40,7 @@ const Education = () => {
                                 </Typography>
                                 <Typography variant="body1">
                                     <div
-                                        className="flex ac"
+                                        className="flex"
                                         style={{ marginBottom: "1rem" }}
                                     >
                                         <SchoolIcon

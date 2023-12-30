@@ -46,13 +46,13 @@ const Portfolio = () => {
                 scrollButtons="auto"
             >
                 {categories.map((category) => (
-                    <Tab key={category} label={category} value={category} />
+                    <Tab key={category} label={category} value={category} className="tab-btn"/>
                 ))}
             </Tabs>
             </div>
             <div className="my-row projects">
                 {filteredProjects.map((project) => (
-                    <div key={project.id} className="block-column project">
+                    <div key={project.id} className="block-column project hover">
                         <img
                             src={project.image}
                             alt={project.title}

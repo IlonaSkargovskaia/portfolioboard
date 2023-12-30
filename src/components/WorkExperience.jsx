@@ -31,7 +31,7 @@ const WorkExperience = () => {
                         <TimelineContent>
                             <div className="work-header flex ac">
                                 <Typography variant="h6" className="title">
-                                    {experience.title} in {" "}
+                                    {experience.title} in{" "}
                                     <span>{experience.company}</span>
                                 </Typography>
                                 <Typography
@@ -43,15 +43,23 @@ const WorkExperience = () => {
                                 >
                                     <div className="flex ac">
                                         {experience.year}
-                                        <CalendarMonthIcon style={{
-                                        fontSize: "14px", marginLeft: "0.5rem"}}/>
+                                        <CalendarMonthIcon
+                                            style={{
+                                                fontSize: "14px",
+                                                marginLeft: "0.5rem",
+                                            }}
+                                        />
                                     </div>
                                 </Typography>
                             </div>
                             <div className="block work-block hover">
                                 <ul>
                                     {experience.description.map((point, i) => (
-                                        <li key={i} className="flex">
+                                        <li
+                                            key={i}
+                                            className="flex"
+                                            style={{ margin: "0.2rem 0" }}
+                                        >
                                             <StarIcon
                                                 style={{
                                                     fontSize: "16px",

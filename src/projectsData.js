@@ -3,6 +3,7 @@ import img2 from './assets/images/2.png'
 import img3 from './assets/images/3.png'
 import img4 from './assets/images/4.png'
 import img5 from './assets/images/5.png'
+import img6 from './assets/images/6.png'
 
 export const projectsData = [
     {
@@ -49,6 +50,16 @@ export const projectsData = [
         id: 5,
         title: "Music player",
         image: img5,
+        languages: ["Angular", "Express", "MySQL"],
+        category: "Mobile App",
+        description: "Another project description.",
+        githubLink: "https://github.com/your-username/project2",
+        liveDemoLink: "https://your-project-demo.com",
+    },
+    {
+        id: 6,
+        title: "Say Hi - marketing LP",
+        image: img6,
         languages: ["Angular", "Express", "MySQL"],
         category: "Mobile App",
         description: "Another project description.",
