@@ -3,12 +3,14 @@ import {
     Tabs,
     Tab,
     CardContent,
-    CardActions,
     Button,
     Typography,
 } from "@mui/material";
 import { projectsData } from "../projectsData";
 import ProjectModal from "./ProjectModal";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import LaunchIcon from "@mui/icons-material/Launch";
+import InfoIcon from "@mui/icons-material/Info";
 
 const Portfolio = () => {
     const [currentCategory, setCurrentCategory] = useState("All");
@@ -50,7 +52,7 @@ const Portfolio = () => {
                 className="flex ac portfolio-box"
                 style={{ justifyContent: "space-between" }}
             >
-                <h3 style={{ margin: "2rem 0rem 2rem 1rem" }}>
+                <h3 style={{ margin: "3rem 0rem 2rem 1rem" }}>
                     Look at my recent projects
                 </h3>
                 <Tabs
@@ -71,16 +73,14 @@ const Portfolio = () => {
             </div>
             <div className="my-row projects">
                 {filteredProjects.map((project) => (
-                    <div
-                        key={project.id}
-                        className="block-column project hover"
-                        onClick={() => handleCardClick(project)} 
-                    >
+                    <div key={project.id} className="block-column project">
                         <img
                             src={project.image}
                             alt={project.title}
                             style={{ width: "100%", height: "auto" }}
+                            onClick={() => handleCardClick(project)}
                         />
+                        <div className="flex jb" style={{flexDirection: "column",     height: "100%"}}>
                         <CardContent>
                             <div className="flex ac jb card-header">
                                 <Typography variant="body2" className="lang">
@@ -105,12 +105,13 @@ const Portfolio = () => {
                                 {project.description}
                             </Typography>
                         </CardContent>
-                        <CardActions>
+                        <div className="project-btns">
                             <Button
                                 href={project.githubLink}
                                 target="_blank"
                                 rel="noreferrer"
                                 className="main-btn"
+                                startIcon={<GitHubIcon />}
                             >
                                 GitHub
                             </Button>
@@ -119,10 +120,19 @@ const Portfolio = () => {
                                 target="_blank"
                                 rel="noreferrer"
                                 className="secondary-btn"
+                                startIcon={<LaunchIcon />}
                             >
                                 Live Demo
                             </Button>
-                        </CardActions>
+                            <Button
+                                onClick={() => handleCardClick(project)}
+                                className="details-btn"
+                                startIcon={<InfoIcon />}
+                            >
+                                Details
+                            </Button>
+                        </div>
+                        </div>
                     </div>
                 ))}
             </div>

@@ -41,7 +41,7 @@ const WorkExperience = () => {
                                         fontWeight: 200,
                                     }}
                                 >
-                                    <div className="flex ac">
+                                    <div className="flex ac" style={{color: "#8f9bba"}}>
                                         {experience.year}
                                         <CalendarMonthIcon
                                             style={{

@@ -4,7 +4,7 @@ import logo from "../assets/images/logo.jpg";
 import "./styles.css";
 import { navigationLinks } from "../linksData";
 import { socialLinks } from "../linksData";
-import bottomImg from "../assets/images/bottom.png";
+// import bottomImg from "../assets/images/bottom.png";
 
 const LeftColumn = () => {
     const [active, setActive] = useState(0);
@@ -71,7 +71,7 @@ const LeftColumn = () => {
                 </div>
 
                 <div className="copyrights">
-                    <div className="sidebar-img-section">
+                    {/* <div className="sidebar-img-section">
                         <div className="sidebar-img-content">
                             <img
                                 src={bottomImg}
@@ -84,7 +84,7 @@ const LeftColumn = () => {
                                 Get in touch
                             </a>
                         </div>
-                    </div>
+                    </div> */}
                     <p>© {new Date().getFullYear()} All rights reserved</p>
                 </div>
             </div>

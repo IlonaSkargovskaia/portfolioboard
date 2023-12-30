@@ -94,8 +94,9 @@ a:active {
 
 .main-btn,
 .projects .main-btn {
-    border: 1px solid var(--accent);
-    color: var(--accent);
+    border: 1px solid var(--light-bg);
+    background-color: var(--light-bg);
+    color: #626c84;
     border-radius: 20px;
     padding: 5px 15px;
     text-transform: capitalize;
@@ -110,8 +111,9 @@ a:active {
 
 .secondary-btn,
 .projects .secondary-btn {
-    border: 1px solid var(--primary);
-    color: var(--primary);
+    border: 1px solid var(--light-bg);
+    background-color: var(--light-bg);
+    color: #626c84;
     border-radius: 20px;
     padding: 5px 15px;
     text-transform: capitalize;
@@ -119,8 +121,25 @@ a:active {
 
 .secondary-btn:hover,
 .projects .secondary-btn:hover {
-    border: 1px solid var(--accent);
-    background-color: var(--accent);
+    border: 1px solid var(--primary);
+    background-color: var(--primary);
+    color: #fff;
+}
+
+.details-btn,
+.projects .details-btn {
+    border: 1px solid var(--light-bg);
+    background-color: var(--light-bg);
+    color: #626c84;
+    border-radius: 20px;
+    padding: 5px 15px;
+    text-transform: capitalize;
+}
+
+.details-btn:hover,
+.projects .details-btn:hover {
+    border: 1px solid var(--primary);
+    background-color: var(--primary);
     color: #fff;
 }
 
@@ -357,7 +376,17 @@ a:active {
 }
 
 .block-column.project {
-    min-width: 23rem;
+    min-width: 25rem;
+    align-self: stretch;
+}
+
+.project .MuiCardContent-root{
+    padding: 1rem 0;
+}
+
+.project-btns{
+    display: flex;
+    justify-content: space-between;
 }
 
 .hover {
@@ -573,7 +602,7 @@ a:active {
 }
 
 .portfolio h4 {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 600;
 }
 
@@ -582,7 +611,7 @@ a:active {
 }
 
 .portfolio .card-desc {
-
+    font-size: 13px;
     font-weight: 200;
     margin-top: 1rem;
 }
