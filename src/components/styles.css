@@ -380,11 +380,11 @@ a:active {
     align-self: stretch;
 }
 
-.project .MuiCardContent-root{
+.project .MuiCardContent-root {
     padding: 1rem 0;
 }
 
-.project-btns{
+.project-btns {
     display: flex;
     justify-content: space-between;
 }
@@ -690,12 +690,23 @@ a:active {
     gap: 1rem;
 }
 
-.close-button{
+.close-button {
     background: none;
     position: absolute;
     top: 3%;
     right: 5%;
 }
+
+.successmsg {
+    background: #bcb3e1;
+    padding: 2rem;
+    border-radius: 20px;
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
 
 @media (max-width: 1235px) {
     header.header {
@@ -872,17 +883,17 @@ a:active {
         width: 100%;
     }
 
-    .sidebar > div{
+    .sidebar>div {
         width: 100%;
     }
 
-    .sidebar ul a{
+    .sidebar ul a {
         justify-content: center;
     }
 }
 
 @media (max-width: 440px) {
-    .header-contacts{
+    .header-contacts {
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;

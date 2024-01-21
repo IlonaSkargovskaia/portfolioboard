@@ -1,18 +1,43 @@
 import { Email, GetApp, Phone } from "@mui/icons-material";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import resumePDF from "../Frontend_CV_Ilona.pdf";
-import { Button, TextField } from "@mui/material";
+import { Button, TextField, Typography } from "@mui/material";
+import emailjs from "emailjs-com";
 
 const Contacts = () => {
     const [name, setName] = useState("");
     const [phone, setPhone] = useState("");
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
+    const [successMessage, setSuccessMessage] = useState("");
+    const form = useRef();
 
-    const handleSendMessage = () => {
-        
-        console.log("Sending message:", message);
-        
+    const handleSendMessage = (e) => {
+        e.preventDefault();
+
+        emailjs
+            .sendForm(
+                "service_z45coha",
+                "template_rhiht5f",
+                form.current,
+                "SzyWICKloGCIr2gpT"
+            )
+            .then(
+                (result) => {
+                    console.log(result.text);
+                    setSuccessMessage("Message sent successfully!");
+                    setName("");
+                    setPhone("");
+                    setEmail("");
+                    setMessage("");
+                },
+                (error) => {
+                    console.log(error.text);
+                    setSuccessMessage(
+                        "Error sending message. Please try again."
+                    );
+                }
+            );
     };
 
     return (
@@ -34,10 +59,7 @@ const Contacts = () => {
                             opportunities, or just to say hello—I'm always open
                             to connecting!
                         </p>
-                        <div
-                            className="flex contacts-accent-block"
-                            
-                        >
+                        <div className="flex contacts-accent-block">
                             <div>
                                 <Phone
                                     style={{
@@ -89,41 +111,57 @@ const Contacts = () => {
                     <h3>Do you have questions?</h3>
                 </div>
                 <div className="contacts-form block-column">
-                    <TextField
-                        label="Name"
-                        fullWidth
-                        value={name}
-                        onChange={(e) => setName(e.target.value)}
-                    />
-                    <TextField
-                        label="Phone"
-                        fullWidth
-                        value={phone}
-                        onChange={(e) => setPhone(e.target.value)}
-                    />
-                    <TextField
-                        label="Email"
-                        fullWidth
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                    />
-                    <TextField
-                        label="Message..."
-                        multiline
-                        rows={4}
-                        fullWidth
-                        value={message}
-                        onChange={(e) => setMessage(e.target.value)}
-                    />
-                    <Button
-                        variant="contained"
-                        color="primary"
-                        onClick={handleSendMessage}
-                        className="download"
-                        style={{marginTop: "1rem"}}
-                    >
-                        Send Message
-                    </Button>
+                    {successMessage ? (
+                        <Typography
+                            variant="body2"
+                            color="success"
+                            className="successmsg"
+                            style={{ marginTop: "1rem" }}
+                        >
+                            {successMessage}
+                        </Typography>
+                    ) : (
+                        <form onSubmit={handleSendMessage} ref={form}>
+                            <TextField
+                                label="Name"
+                                fullWidth
+                                value={name}
+                                name="user_name"
+                                onChange={(e) => setName(e.target.value)}
+                            />
+                            <TextField
+                                label="Phone"
+                                fullWidth
+                                value={phone}
+                                onChange={(e) => setPhone(e.target.value)}
+                            />
+                            <TextField
+                                label="Email"
+                                fullWidth
+                                value={email}
+                                name="user_email"
+                                onChange={(e) => setEmail(e.target.value)}
+                            />
+                            <TextField
+                                label="Message..."
+                                multiline
+                                rows={4}
+                                fullWidth
+                                value={message}
+                                name="message"
+                                onChange={(e) => setMessage(e.target.value)}
+                            />
+                            <Button
+                                variant="contained"
+                                color="primary"
+                                onClick={handleSendMessage}
+                                className="download"
+                                style={{ marginTop: "1rem" }}
+                            >
+                                Send Message
+                            </Button>
+                        </form>
+                    )}
                 </div>
             </div>
         </>
